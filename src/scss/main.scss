@@ -1,0 +1,14 @@
+.tabs__link {
+
+  &.active {
+    color: red;
+  }
+}
+
+.tabs__panel {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}

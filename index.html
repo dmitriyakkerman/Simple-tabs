@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./dist/css/simple-tabs.min.css">
+  <title>Simple tabs</title>
+</head>
+<body>
+
+  <ul class="tabs">
+    <li>
+      <a href="#1">Link1</a>
+    </li>
+    <li>
+      <a href="#2">Link2</a>
+    </li>
+    <li>
+      <a href="#3">Link3</a>
+    </li>
+  </ul>
+
+  <div class="tabs-result">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+<script src="./dist/js/simple-tabs.js"></script>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    new Tabs({
+     tabLinks: document.querySelectorAll('.tabs a'),
+     tabPanels: document.querySelectorAll('.tabs-result div')
+    })
+  });
+
+</script>
+
+</body>
+</html>
