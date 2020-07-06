@@ -5,10 +5,6 @@ class Tabs {
 
     this.addClassesOnInit();
     this.setCurrent();
-
-    this.tabLinks[0].classList.add('active');
-    this.tabPanels[0].classList.add('active');
-
   }
 
   static clearClasses() {
@@ -19,18 +15,26 @@ class Tabs {
     });
   }
 
-  addClassesOnInit() {
+    addClassesOnInit() {
 
-    let that = this;
+        let that = this;
 
-    that.tabLinks.forEach(function(tabLink) {
-      tabLink.classList.add('tabs__link')
-    })
+        that.tabLinks.forEach(function(tabLink, index) {
+            tabLink.classList.add('tabs__link');
 
-    that.tabPanels.forEach(function(tabPanel) {
-      tabPanel.classList.add('tabs__panel')
-    })
-  }
+            if(index === 0) {
+                tabLink.classList.add('active');
+            }
+        })
+
+        that.tabPanels.forEach(function(tabPanel, index) {
+            tabPanel.classList.add('tabs__panel');
+
+            if(index === 0) {
+                tabPanel.classList.add('active');
+            }
+        })
+    }
 
   setCurrent() {
 
